@@ -1,0 +1,46 @@
+{
+  "name": "dsh-context-watch",
+  "version": "0.1.0",
+  "description": "Warn an agent before its context window fills up — with the current size, the limit, and what's left.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "context",
+    "context-window",
+    "plugin",
+    "cordis"
+  ],
+  "author": "HanyuReo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HanyuReo/dsh-context-watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HanyuReo/dsh-context-watch/issues"
+  },
+  "homepage": "https://github.com/HanyuReo/dsh-context-watch#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

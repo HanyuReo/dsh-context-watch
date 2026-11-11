@@ -1,0 +1,18 @@
+# dsh-context-watch —— 随包发布的挂载声明
+#
+# package.json 里 `dsh.bundle.patch = "./cordis.patch.yml"`，
+# 宿主在加载 bundle 时读这个文件。
+#
+# 手工挂载（不用 bundle）时，把下面这段加进 profile 的 cordis.patch.yml：
+#
+#   - id: context-watch
+#     name: 'dsh-context-watch'
+#     config:
+#       thresholds: [0.8, 0.92]
+#
+# 想改默认参数，就在 profile 里用同一个 id 覆盖 config。
+- insert:
+  - id: context-watch
+    name: 'dsh-context-watch'
+    config:
+      thresholds: [0.8, 0.92]
